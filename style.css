@@ -1,0 +1,401 @@
+/* VOCI BRAND GUIDELINES - CSS IMPLEMENTATION */
+/*
+    Primary Colors:
+    - Blue (#1E90FF): Digital, Trust, Communication 
+    - Red (#BF0000): CTAs, Passion, Impact 
+    - Dark Gold (#D4A017): Prestige, Excellence, Certificates 
+
+    Typography:
+    - Headings: Montserrat 
+    - Body: Open Sans 
+*/
+
+:root {
+    --primary-blue: #1E90FF;
+    --impact-red: #BF0000;
+    --prestige-gold: #D4A017;
+    --dark-grey: #2c3e50;
+    --light-grey: #f4f4f4;
+    --white: #FFFFFF;
+    --black: #000000;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--dark-grey);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--dark-grey);
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* Header & Navbar */
+.navbar {
+    background: var(--white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-grey);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+.cta-button {
+    background-color: var(--impact-red);
+    color: var(--white);
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #a50000;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1500x800.png?text=Inspirational+VOCI+Event') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding-top: 70px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* Mission Section */
+.mission-section {
+    background: var(--light-grey);
+}
+.mission-section h2 {
+    color: var(--dark-grey);
+}
+.mission-section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    font-size: 1.1rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.value-card h3 {
+    color: var(--primary-blue);
+}
+
+/* Pillars Section */
+.pillars-section {
+    background: var(--white);
+}
+
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.pillar-card {
+    padding: 40px 20px;
+}
+
+.pillar-icon {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.pillar-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Programs Section */
+.programs-section {
+    background: var(--light-grey);
+}
+
+.programs-section ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.programs-section li {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.programs-section i {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+
+/* Certification Section */
+.certification-section {
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
+
+.cert-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--prestige-gold);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cert-icon {
+    font-size: 3.5rem;
+    color: var(--prestige-gold);
+    margin-bottom: 20px;
+}
+
+.cert-card h3 {
+    color: var(--prestige-gold);
+    font-size: 1.8rem;
+}
+
+/* Join Section */
+.join-section {
+    background: var(--primary-blue);
+    color: var(--white);
+    text-align: center;
+}
+.join-section h2 {
+    color: var(--white);
+}
+
+.join-section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.final-cta {
+    background-color: var(--white);
+    color: var(--primary-blue);
+    padding: 15px 35px;
+    font-size: 1.2rem;
+}
+.final-cta:hover {
+    background-color: var(--light-grey);
+}
+
+/* Footer */
+footer {
+    background: var(--dark-grey);
+    color: var(--white);
+    padding: 60px 0 20px 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-content h3, .footer-content h4 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+.footer-content a {
+    color: var(--light-grey);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-content a:hover {
+    color: var(--primary-blue);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+.footer-links li {
+    margin-bottom: 10px;
+}
+.social-icons {
+    margin-top: 20px;
+}
+.social-icons a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #4a637a;
+    font-size: 0.9rem;
+    color: var(--light-grey);
+}
+
+
+/* Responsive Design & Mobile Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background: var(--dark-grey);
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--white);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        text-align: center;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links li {
+        padding: 15px 0;
+    }
+    .nav-cta {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .pillars-grid {
+        grid-template-columns: 1fr;
+    }
+}
